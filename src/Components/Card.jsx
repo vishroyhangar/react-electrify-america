@@ -1,24 +1,26 @@
 import React from 'react';
-import './Card.scss';
+import '../sass/Card.scss';
 
 
-const Card = ({image, title, text}) => {
+const Card = ({link, variation, image, title, text}) => {
     return (
-        <div className='card--normal'>
-            <div className="card__image">
-                <img src={image} />
-            </div>
+        <a className="card__link" href={link}>
+            <div className={`card ${variation}`}>
+                <div className={`card__image ${variation === 'card--small' ? 'card__image--small' : ''}`}>
+                    <img src="https://www.electrifyamerica.com/img/member.3601bd05.png" />
+                </div>
 
-            <div className="card__text-content">
-                <h2>
-                    {title}
-                </h2>
+                <div className="card__text-content">
+                    <h3>
+                        {title} <span className="material-icons">arrow_forward</span>
+                    </h3>
 
-                <p>
-                    {text}
-                </p>
+                    <p>
+                        {text}
+                    </p>
+                </div>
             </div>
-        </div>
+        </a>
     )
 }
 
