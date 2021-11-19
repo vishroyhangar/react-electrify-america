@@ -7,7 +7,7 @@ const Card = ({link, variation, image, title, text}) => {
         <a className="card__link" href={link}>
             <div className={`card ${variation}`}>
                 <div className={`card__image ${variation === 'card--small' ? 'card__image--small' : ''}`}>
-                    <img src="https://www.electrifyamerica.com/img/member.3601bd05.png" />
+                    <img src={image} />
                 </div>
 
                 <div className="card__text-content">

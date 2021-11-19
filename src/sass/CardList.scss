@@ -1,5 +1,35 @@
+@import './variables.scss';
+
 .card-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 1rem;
+    margin: 1rem;
+    padding: 1rem 0;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 30rem);
+        grid-row-gap: 2rem;
+        grid-column-gap: 2rem;
+        margin: 0 2rem;
+        padding: 2rem 0;
+    }
+
+    @media screen and (min-width: 1366px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 37rem);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        margin: 0 3rem;
+        padding: 3rem 0;
+
+    }
+
+    @media screen and (min-width: 1440px) {
+        grid-template-rows: repeat(3, 40rem);
+        margin: 0 4rem;
+    }
 }
