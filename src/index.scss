@@ -1,3 +1,5 @@
+@import '../src/sass/Variables.scss';
+
 * {
   box-sizing: border-box;
 }
@@ -11,7 +13,7 @@ html {
 
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: $fontLato;
   margin: 0;
   padding: 0;
 }
@@ -19,6 +21,7 @@ body {
 
 
 h3 {
+  font-weight: $fontSemi;
   font-size: 0.8rem;
 
   @media screen and (min-width: 768px) {
@@ -48,4 +51,19 @@ p {
   @media screen and (min-width: 1440px) {
     font-size: 1.2rem;
   }
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
