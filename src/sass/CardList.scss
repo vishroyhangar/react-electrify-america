@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './Variables.scss';
 
 .card-list {
     display: grid;
@@ -20,7 +20,7 @@
 
     @media screen and (min-width: 1366px) {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 37rem);
+        grid-template-rows: repeat(2, 37rem);
         grid-column-gap: 2rem;
         grid-row-gap: 2rem;
         margin: 0 3rem;
@@ -29,7 +29,7 @@
     }
 
     @media screen and (min-width: 1440px) {
-        grid-template-rows: repeat(3, 40rem);
+        grid-template-rows: repeat(2, 40rem);
         margin: 0 4rem;
     }
 }
