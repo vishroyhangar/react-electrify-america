@@ -1,0 +1,65 @@
+@import './Variables.scss';
+
+.footer {
+    background-color: $colorPrimary;
+    padding: 1rem 2rem;
+
+    @media screen and (min-width: 1366px) {
+        padding: 2rem 4rem;
+    }
+}
+
+
+
+.footer__nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1366px) {
+        justify-content: center;
+    }
+
+    li {
+        padding: 0.5rem;
+
+        @media screen and (min-width: 1366px) {
+            padding: 1rem;
+        }
+
+        &:first-child {
+            a {
+                font-weight: $fontBold;
+            }
+        }
+
+        a {
+            color: $colorWhite;
+            font-weight: $fontLight;
+            font-size: 0.9rem;
+            transition: all 0.6s ease;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            span {
+                font-weight: $fontBold;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 0.8rem;
+            }
+
+            @media screen and (min-width: 1366px) {
+                font-size: 1rem;
+            }
+        }
+    }
+}
