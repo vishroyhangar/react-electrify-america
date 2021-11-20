@@ -1,7 +1,8 @@
 import './App.css';
 import CardList from './Components/CardList'
-import Footer from './HOC/Footer';
-import Header from './HOC/Header';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import Main from './Components/Main';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
 
       <Header />
 
-      <CardList />
+      <Main />
 
       <Footer />
     </div>

@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.main-content {
+    padding: 0;
+    margin: 1rem;
+
+    @media screen and (min-width: 768px) {
+        margin: 2rem;
+    }
+
+    @media screen and (min-width: 1366px) {
+    }
+}
+
+.main-content__wrapper {
+    margin: 0;
+
+    @media screen and (min-width: 768px) {
+        margin: 0 4rem 5rem 4rem;
+    }
+
+    @media screen and (min-width: 1366px) {
+        margin: 0 5rem 7rem 5rem;
+    }
+}

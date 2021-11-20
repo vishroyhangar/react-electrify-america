@@ -78,7 +78,7 @@ class CardList extends React.Component {
                     {
                         this.state.content.map(item => {
                             if (item.id === '06') {
-                                return <CardDownload title={item.title} text={item.text} />
+                                return <CardDownload key={item.id} title={item.title} text={item.text} />
                             } else {
                                 return <Card key={item.id} link={item.link} variation={item.variation} image={item.image} title={item.title} text={item.text} />
                             }
