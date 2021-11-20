@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.about-content {
+    height: 45vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://www.electrifyamerica.com/img/about_us.2db6f8d1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 1rem;
+    margin: 0;
+    display: grid;
+    border-radius: 10px;
+
+    @media screen and (min-width: 768px) {
+        height: 75vh;
+        padding: 0 4rem 5rem 4rem;
+    }
+
+    @media screen and (min-width: 1366px) {
+        background-size: cover;
+        padding: 0 5rem 7rem 5rem;
+    }
+}
