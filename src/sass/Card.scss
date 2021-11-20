@@ -75,7 +75,12 @@
 
 .card__text-content {
     text-align: left;
-    padding: 1rem 0 0 2rem;
+    padding: 1rem;
+    padding-left: 0.5rem;
+
+    @media screen and (min-width: 1366px) {
+        padding: 1rem 0 0 2rem;
+    }
 
     h3 {
         margin-top: 0;
@@ -83,6 +88,16 @@
         align-items: center;
         transition: all 0.4s ease;
         font-weight: $fontBold;
+        font-size: 1rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        @media screen and (min-width: 1366px) {
+            font-size: 1.3rem;
+        }
 
         span {
             font-size: 1rem;
