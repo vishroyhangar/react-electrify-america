@@ -72,14 +72,20 @@ class CardList extends React.Component {
 
     render() {
         return (
-            <div className="card-list">
-                {/* {this.content.map(item => {
+            <div className="card-list-container">
+                <h2>
+                    Learn about charging with
+                    Electrify America
+                </h2>
+                <div className="card-list">
+                    {/* {this.content.map(item => {
                     <Card id={item.id} link={item.link} variation={item.variation} />
                 })} */}
 
-                <Card link={this.content[0].link} variation={''} image={this.content[0].image} title={this.content[0].title} text={this.content[0].text} />
-                <Card link={this.content[1].link} variation={'card--small'} image={this.content[1].image} title={this.content[1].title} text={this.content[1].text} />
-                <Card link={this.content[2].link} variation={''} image={this.content[2].image} title={this.content[2].title} text={this.content[2].text} />
+                    <Card link={this.content[0].link} variation={''} image={this.content[0].image} title={this.content[0].title} text={this.content[0].text} />
+                    <Card link={this.content[1].link} variation={'card--small'} image={this.content[1].image} title={this.content[1].title} text={this.content[1].text} />
+                    <Card link={this.content[2].link} variation={''} image={this.content[2].image} title={this.content[2].title} text={this.content[2].text} />
+                </div>
             </div>
         )
     }
