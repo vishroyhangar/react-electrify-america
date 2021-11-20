@@ -1,6 +1,7 @@
 import React from "react";
 import Card from './Card.jsx';
 import '../sass/CardList.scss';
+import CardDownload from "./CardDownload.jsx";
 
 
 class CardList extends React.Component {
@@ -48,6 +49,12 @@ class CardList extends React.Component {
                     image: 'https://www.electrifyamerica.com/img/support_desktop.26504b28.png',
                     title: 'SUPPORT & TROUBLESHOOTING',
                     text: 'Have a question or issue with a charging station? Our team is here to help.Call us at 1-833 - 632 - 2778 or use our contact form.'
+                },
+                {
+                    id: '06',
+                    variation: '',
+                    title: 'Contactless In- app Payment',
+                    text: 'Download the Electrify America mobile app to pay for your charging session right from your phone.'
                 }
             ]
         }
@@ -69,9 +76,13 @@ class CardList extends React.Component {
 
                 <div className="card-list">
                     {
-                        this.state.content.map(item => (
-                            <Card key={item.id} link={item.link} variation={item.variation} image={item.image} title={item.title} text={item.text}/>
-                        ))
+                        this.state.content.map(item => {
+                            if (item.id === '06') {
+                                return <CardDownload title={item.title} text={item.text} />
+                            } else {
+                                return <Card key={item.id} link={item.link} variation={item.variation} image={item.image} title={item.title} text={item.text} />
+                            }
+                        })
                     }
 
                     
