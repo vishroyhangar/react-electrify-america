@@ -56,7 +56,7 @@
     overflow: hidden;
     transition: all 0.4s ease;
 
-    @media screen and (min-width: 1366px) {
+    @media screen and (min-width: 768px) {
         height: 60%;
     }
 
@@ -71,7 +71,7 @@
     height: 50%;
 
     @media screen and (min-width: 768px) {
-        height: 50%;
+        height: 60%;
     }
 
     @media screen and (min-width: 1366px) {
@@ -105,6 +105,15 @@
 
     h1 {
         font-weight: $fontBold;
+        font-size: 1.5rem;
+
+        @media screen and (min-width: 768px) {
+            font-size: 1.7rem;
+        }
+
+        @media screen and (min-width: 1366px) {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -113,6 +122,10 @@
 .card__text-content__buttons {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+        justify-content: space-evenly;
+    }
 
     @media screen and (min-width: 1366px) {
         justify-content: space-between;
@@ -123,7 +136,7 @@
         width: 8.5rem;
 
         @media screen and (min-width: 768px) {
-            width: 8rem;
+            width: 7rem;
         }
 
         @media screen and (min-width: 1366px) {

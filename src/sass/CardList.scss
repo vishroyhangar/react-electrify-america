@@ -46,8 +46,8 @@
 
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 22rem);
-        grid-column-gap: 1rem;
+        grid-template-rows: repeat(3, 28rem);
+        grid-column-gap: 2rem;
     }
 
     @media screen and (min-width: 1366px) {
