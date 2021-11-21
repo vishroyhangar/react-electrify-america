@@ -56,9 +56,6 @@
     overflow: hidden;
     transition: all 0.4s ease;
 
-    @media screen and (min-width: 1366px) {
-        height: 60%;
-    }
 
     img {
         width: 100%;
@@ -115,7 +112,6 @@
     justify-content: space-between;
 
     @media screen and (min-width: 1366px) {
-        justify-content: space-between;
         padding: 1rem 0 0 2rem;
     }
 
