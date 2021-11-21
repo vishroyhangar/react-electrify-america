@@ -47,19 +47,16 @@
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 22rem);
-        grid-column-gap: 1rem;
     }
 
     @media screen and (min-width: 1366px) {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 37rem);
+        grid-template-rows: repeat(2, 31rem);
         grid-column-gap: 3rem;
-        grid-row-gap: 2rem;
 
     }
 
     @media screen and (min-width: 1440px) {
-        grid-template-rows: repeat(2, 40rem);
         grid-column-gap: 4rem;
     }
 }

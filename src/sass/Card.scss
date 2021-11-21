@@ -56,6 +56,9 @@
     overflow: hidden;
     transition: all 0.4s ease;
 
+    @media screen and (min-width: 1366px) {
+        height: 60%;
+    }
 
     img {
         width: 100%;
@@ -67,12 +70,8 @@
 .card__image--small {
     height: 50%;
 
-    @media screen and (min-width: 768px) {
-        height: 50%;
-    }
-
     @media screen and (min-width: 1366px) {
-        height: 40%;
+        height: 45%;
     }
 }
 
@@ -99,10 +98,6 @@
             margin-left: 0.2rem;
         }
     }
-
-    h1 {
-        font-weight: $fontBold;
-    }
 }
 
 
@@ -111,12 +106,29 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (min-width: 768px) {
+        justify-content: start;
+    }
+
     @media screen and (min-width: 1366px) {
         padding: 1rem 0 0 2rem;
     }
 
+    h1 {
+        font-weight: $fontBold;
+        margin-top: 0;
+    }
+
     img {
         width: 8.5rem;
+
+        &:first-child {
+            margin-right: 0;
+
+            @media screen and (min-width: 768px) {
+                margin-right: 1rem;
+            }
+        }
 
         @media screen and (min-width: 768px) {
             width: 8rem;
