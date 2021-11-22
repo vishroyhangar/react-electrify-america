@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-.about-content {
+.section-about {
     height: 45vh;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://www.electrifyamerica.com/img/about_us.2db6f8d1.png);
     background-repeat: no-repeat;
@@ -13,11 +13,49 @@
 
     @media screen and (min-width: 768px) {
         height: 75vh;
-        padding: 0 4rem 5rem 4rem;
+        padding: 0 4rem 0 4rem;
     }
 
     @media screen and (min-width: 1366px) {
         background-size: cover;
-        padding: 0 5rem 7rem 5rem;
+        padding: 0 5rem 0 5rem;
+    }
+}
+
+
+.section-about__details {
+    align-self: center;
+    width: 100%;
+
+    @media screen and (min-width: 1366px) {
+        width: 50%;
+    }
+
+
+    a {
+        color: $colorWhite;
+
+        h3 {
+            display: flex;
+            align-items: center;
+            font-weight: $fontBold;
+
+            span {
+                margin-left: 0.3rem;
+            }
+        }
+
+        &~h1 {
+            margin-top: 0;
+            font-size: 1.4rem;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.7rem;
+            }
+
+            @media screen and (min-width: 1366px) {
+                font-size: 2.2rem;
+            }
+        }
     }
 }
