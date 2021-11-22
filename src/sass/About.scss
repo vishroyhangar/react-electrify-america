@@ -1,39 +1,64 @@
 @import './variables.scss';
 
 .section-about {
-    height: 45vh;
+    display: grid;
+
+    @media screen and (min-width: 768px) {
+        grid-template-areas: 'content';
+    }
+}
+
+
+
+.section-about__image {
+    height: 26vh;
+    width: 100%;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://www.electrifyamerica.com/img/about_us.2db6f8d1.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 2rem 1rem;
-    margin: 0;
-    display: grid;
     border-radius: 10px;
 
     @media screen and (min-width: 768px) {
-        height: 75vh;
-        padding: 0 4rem 0 4rem;
+        height: 45vh;
+        grid-area: content;
     }
 
-    @media screen and (min-width: 1366px) {
-        background-size: cover;
-        padding: 0 5rem 0 5rem;
+    @media screen and (min-width: 768px) {
+        height: 75vh;
     }
 }
 
 
 .section-about__details {
-    align-self: center;
     width: 100%;
+    padding: 0 1rem 2rem 1rem;
+    padding-top: 0;
+    margin: 0;
+    color: $colorPrimary;
 
-    @media screen and (min-width: 1366px) {
-        width: 50%;
+    @media screen and (min-width: 768px) {
+        padding: 0 4rem 0 4rem;
+        grid-area: content;
+        align-self: center;
+        color: $colorWhite;
     }
 
+    @media screen and (min-width: 1366px) {
+        width: 60%;
+        padding: 0 5rem 0 5rem;
+    }
 
     a {
-        color: $colorWhite;
+        color: $colorPrimary;
+
+        @media screen and (min-width: 768px) {
+            color: $colorWhite;
+        }
+
+        &:hover {
+            color: $colorAccent;
+        }
 
         h3 {
             display: flex;
@@ -41,7 +66,8 @@
             font-weight: $fontBold;
 
             span {
-                margin-left: 0.3rem;
+                font-size: 1rem;
+                margin-left: 0.2rem;
             }
         }
 

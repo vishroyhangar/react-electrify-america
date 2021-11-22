@@ -4,6 +4,8 @@ import '../sass/About.scss';
 export default function About() {
     return (
         <section className="section-about">
+            <div className="section-about__image"></div>
+
             <div className="section-about__details header__details">
                 <a href="/">
                     <h3>
@@ -19,7 +21,8 @@ export default function About() {
                 <p>
                     We’re building out a convenient, reliable, customer-centric network of electric vehicle chargers nationwide—at workplaces, in communities, and on highways.
                 </p>
-            </div>  
+            </div>
+
         </section>
     )
 }
