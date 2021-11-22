@@ -1,13 +1,50 @@
 import React from "react";
 import '../sass/PreFooter.scss';
+import PreFooterLinks from "./PreFooterLinks";
 
 const PreFooter = () => {
+    let contents = [
+        [
+            'LOCATE A CHARGER',
+            'HOW IT WORKS',
+            'PRICING',  
+            'MOBILE APP',
+            'RENEWABLE ENERGY',
+            'GLOSSARY'
+        ],
+        [
+            'ABOUT',
+            'OUR PLAN',
+            'NEWS & Updates',
+            'our team',
+            'careers',
+            'Green city'
+        ],
+        [
+            'contact us',
+            'submissions',
+            'Sign up for updates',
+            'marketing opportunities'
+        ],
+        [
+            'HOME PRODUCTS'
+        ],
+        [
+            'COMMERCIAL SOLUTIONS'
+        ]
+    ]
     return(
         <div className="pre-footer">
             <div className="container__links">
                 <div className="container__links__logo">
                     <img src="" alt="" />
                 </div>
+
+                {
+                    contents.map(item => {
+                        return <PreFooterLinks value={item} />
+                    })
+                }
             </div>
 
             <div className="pre-footer__container-socials">
