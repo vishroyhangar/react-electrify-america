@@ -1,0 +1,53 @@
+@import './variables.scss';
+
+
+.pre-footer {
+    background-color: $colorPrimary;
+    padding: 1rem 1rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 2rem;
+    }
+}
+
+
+.pre-footer__container-socials {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+
+
+.container-socials__nav-appstore {
+    img {
+        width: 6rem;
+        margin-right: 0.5rem;
+
+        @media screen and (min-width: 768px) {
+            width: 5rem;
+        }
+
+        @media screen and (min-width: 1366px) {
+            width: 8rem;
+        }
+    }
+}
+
+
+.container-socials__nav-socials {
+    img {
+        width: 1.5rem;
+        margin-left: 1rem;
+        margin: 1rem;
+
+        @media screen and (min-width: 1366px) {
+            width: 1.5rem;
+        }
+    }
+}
