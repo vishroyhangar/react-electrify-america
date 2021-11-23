@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $colorPrimary;
+    padding: 0 1rem;
+
+    @media screen and (min-width: 768px) {
+        padding: 0 2rem;
+    }
+
+    a {
+        color: $colorWhite;
+        font-weight: $fontSemi;
+    }
+}
+
+
+.topbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.topbar__container__menu-left {}
+
+
+.menu-left__logo {
+    img {
+        width: 9rem;
+        padding: 0.5rem;
+    }
+}
+
+
+
+.topbar__container__menu-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.menu-center__list-right,
+.menu-center__list-left {
+    display: flex;
+
+    a {
+        padding: 0 1rem;
+    }
+}
+
+.menu-center__list-left {
+    width: 55%;
+}
+
+.menu-center__list-right {
+    justify-content: flex-end;
+    width: 25%;
+    text-align: left;
+}
+
+
+
+.menu-right__list {
+    display: flex;
+
+    span {
+        color: $colorWhite;
+        padding: 1rem;
+        font-size: 1.8rem;
+    }
+}
+
+.js-btn-menu {
+    display: block;
+
+    @media screen and (min-width: 1366px) {
+        display: none;
+    }
+}
