@@ -5,6 +5,7 @@ import Logo from '../image/logo-normal.png';
 const Topbar = () => {
     const [isMenuClicked, setMenuClick] = useState(false);
     const [menuVisible, setMenuVisible] = useState('');
+    const [menuIcon, setMenuIcon] = useState('menu'); //used to change menu icon span
 
 
     /**
@@ -14,8 +15,10 @@ const Topbar = () => {
     const btnMenuClick = () => {
         if(!isMenuClicked) {
             setMenuVisible('topbar__container__menu-center--menu-visible');
+            setMenuIcon('close');
         } else {
             setMenuVisible('');
+            setMenuIcon('menu');
         }
 
         setMenuClick(!isMenuClicked);
@@ -63,7 +66,7 @@ const Topbar = () => {
                         </span>
 
                         <span className="material-icons js-btn-menu" onClick={btnMenuClick}>
-                            menu
+                            {menuIcon}
                         </span>
                     </nav>
                 </div>
