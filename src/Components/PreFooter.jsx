@@ -1,6 +1,7 @@
 import React from "react";
 import '../sass/PreFooter.scss';
 import PreFooterLinks from "./PreFooterLinks";
+import Logo from '../image/logo-white.png';
 
 const PreFooter = () => {
     let contents = [
@@ -37,7 +38,7 @@ const PreFooter = () => {
         <div className="pre-footer">
             <div className="container__links">
                 <div className="container__links__logo">
-                    <img src="" alt="" />
+                    <img src={Logo} alt="" />
                 </div>
 
                 {
