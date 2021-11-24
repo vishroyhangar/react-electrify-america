@@ -1,8 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import '../sass/Topbar.scss';
 import Logo from '../image/logo-normal.png';
 
 const Topbar = () => {
+    const [isMenuClicked, setMenuClick] = useState(false);
+    const [menuVisible, setMenuVisible] = useState('');
+
+
+    /**
+     * Button event for menu.
+     * check if menuBtn is click and toggles the state
+     */
+    const btnMenuClick = () => {
+        if(!isMenuClicked) {
+            setMenuVisible('topbar__container__menu-center--menu-visible');
+        } else {
+            setMenuVisible('');
+        }
+
+        setMenuClick(!isMenuClicked);
+    }
+
+    
 
     return(
         <div className="topbar">
@@ -16,7 +35,7 @@ const Topbar = () => {
                 </div>
 
 
-                <div className="topbar__container__menu-center">
+                <div className={`topbar__container__menu-center ${menuVisible}`}>
                     <nav className="menu-center__list-left">
                         <a href="">
                             Locate a charge
@@ -43,7 +62,7 @@ const Topbar = () => {
                             search
                         </span>
 
-                        <span className="material-icons js-btn-menu">
+                        <span className="material-icons js-btn-menu" onClick={btnMenuClick}>
                             menu
                         </span>
                     </nav>
