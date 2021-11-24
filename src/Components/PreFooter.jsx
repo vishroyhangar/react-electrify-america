@@ -48,7 +48,7 @@ const PreFooter = () => {
                 }
             </div>
 
-            <div className="pre-footer__container-socials">
+            <div className="container-socials">
                 <nav className="container-socials__nav-appstore">
                     <a href="/">
                         <img src="https://www.electrifyamerica.com/img/app-store-logo.e2326c69.png" alt="" />
