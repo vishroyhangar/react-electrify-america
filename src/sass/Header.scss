@@ -9,9 +9,11 @@
     background-position: center;
     padding: 2rem 1rem;
     display: grid;
+    margin-top: 2rem;
 
     @media screen and (min-width: 768px) {
         margin: 2rem;
+        margin-top: 7rem;
         padding: 0 4rem 5rem 4rem;
         border-radius: 10px;
     }
