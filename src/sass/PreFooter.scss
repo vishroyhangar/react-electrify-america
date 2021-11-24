@@ -51,7 +51,15 @@
 
 
 
-.pre-footer__container-socials {
+.container__links__logo {
+    img {
+        width: 7rem;
+    }
+}
+
+
+
+.container-socials {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
