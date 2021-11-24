@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import '../sass/Topbar.scss';
+import SearchBar from './SearchBar';
 import Logo from '../image/logo-normal.png';
 
 const Topbar = () => {
     const [isMenuClicked, setMenuClick] = useState(false);
     const [menuVisible, setMenuVisible] = useState('');
     const [menuIcon, setMenuIcon] = useState('menu'); //used to change menu icon span
+
+    const [isSearchClicked, setSearchClick] = useState(false);
+    const [searchVisible, setSearchVisible] = useState('');
 
 
     /**
@@ -24,11 +28,31 @@ const Topbar = () => {
         setMenuClick(!isMenuClicked);
     }
 
+    /**
+     * Button event for search.
+     * check if searchBtn is click and toggles the state
+     * state is passed as prop to searchBar component
+     */
+    const btnSearchClick = event => {
+        event.preventDefault();
+
+        if (!isSearchClicked) {
+            setSearchVisible('search-bar--visible');
+        } else {
+            setSearchVisible('');
+        }
+
+        setSearchClick(!isSearchClicked);
+    }
+
     
 
     return(
         <div className="topbar">
             <div className="topbar__container">
+                <SearchBar searchVisible={searchVisible} isBtnClicked={isSearchClicked} btnSearchEvent={btnSearchClick}/>
+
+
                 <div className="topbar__container__menu-left">
                     <div className="menu-left__logo">
                         <a href="/">
@@ -61,7 +85,7 @@ const Topbar = () => {
 
                 <div className="topbar__container__menu-right">
                     <nav className="menu-right__list">
-                        <span className="material-icons js-btn-search">
+                        <span className="material-icons js-btn-search" onClick={btnSearchClick}>
                             search
                         </span>
 

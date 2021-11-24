@@ -1,0 +1,69 @@
+@import './variables.scss';
+
+.search-bar {
+    position: absolute;
+    right: 0%;
+    background-color: $colorPrimary;
+    z-index: 99;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        width: 25rem;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        input {
+            padding: 1rem 0.5rem;
+            background-color: transparent;
+            width: 75%;
+            font-size: 0.8rem;
+            border: none;
+            border-bottom: 2px solid $colorWhite;
+            color: $colorWhite;
+
+            @media screen and (min-width: 768px) {
+                font-size: 1.2rem;
+            }
+
+            &:focus-visible {
+                outline-width: 0;
+                outline-offset: 0;
+            }
+
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            &::placeholder {
+                color: $colorWhite;
+                opacity: 0.8;
+                font-family: $fontLato;
+            }
+
+            /* Internet Explorer 10-11 */
+            &:-ms-input-placeholder {
+                color: $colorWhite;
+            }
+
+            /* Microsoft Edge */
+            &::-ms-input-placeholder {
+                color: $colorWhite;
+            }
+        }
+
+        button {
+            padding: 1rem;
+            width: 25%;
+            color: $colorWhite;
+        }
+    }
+}
+
+
+.search-bar--visible {
+    display: block;
+}
