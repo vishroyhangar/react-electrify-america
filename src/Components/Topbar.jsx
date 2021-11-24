@@ -9,7 +9,9 @@ const Topbar = () => {
             <div className="topbar__container">
                 <div className="topbar__container__menu-left">
                     <div className="menu-left__logo">
-                        <img src={Logo} alt="" />
+                        <a href="/">
+                            <img src={Logo} alt="" />
+                        </a>
                     </div>
                 </div>
 
