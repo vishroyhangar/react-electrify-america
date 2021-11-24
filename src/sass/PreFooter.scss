@@ -17,10 +17,12 @@
     grid-template-rows: repeat(6, auto);
     grid-row-gap: 2rem;
     padding: 4rem 0;
+    padding-top: 2rem;
 
     @media screen and (min-width: 768px) {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, auto);
+        padding: 4rem 0;
     }
 
     @media screen and (min-width: 1366px) {
@@ -52,6 +54,8 @@
 
 
 .container__links__logo {
+    justify-self: start;
+
     img {
         width: 7rem;
     }
